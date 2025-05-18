@@ -58,8 +58,8 @@ public class QuestionController {
 
 
     @GetMapping("generate")
-    public ResponseEntity<List<Integer>> getQuestionsForQuiz(@RequestParam String categoryname, @RequestParam Integer numQuestion) {
-        return questionService.getQuestionsForQuiz(categoryname,numQuestion);
+    public ResponseEntity<List<Integer>> getQuestionsForQuiz(@RequestParam String categoryname, @RequestParam Integer numQ) {
+        return questionService.getQuestionsForQuiz(categoryname,numQ);
     }
     
     @PostMapping("getquestions")
@@ -69,7 +69,6 @@ public class QuestionController {
     
     @PostMapping("getscore")
     public ResponseEntity<Integer>getScore(@RequestBody List<Response> responses) {
-        //TODO: process POST request
         
         return questionService.getScore(responses);
     }

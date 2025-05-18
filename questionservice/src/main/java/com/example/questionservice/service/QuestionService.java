@@ -25,8 +25,8 @@ public class QuestionService {
             
     }
 
-    public List<Questions> getQuestionsByCategory(String category) {
-        return questionsRepo.findByCategory(category);
+    public List<Questions> getQuestionsByCategory(String categoryname) {
+        return questionsRepo.findByCategory(categoryname);
     }
 
     public void addquestion(Questions question) {
